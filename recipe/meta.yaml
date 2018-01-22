@@ -10,8 +10,8 @@ package:
 source:
   fn: sp_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/sp_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/sp/sp_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/sp_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/sp/sp_{{ version }}.tar.gz
   sha256: 0d2f84102591ed57d4b5d361a7a42bc72d2a9d49f38c6227e87e8ccb946dde27
 
 
