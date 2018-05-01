@@ -1,4 +1,4 @@
-{% set version = '1.2-5' %}
+{% set version = '1.2-7' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,18 +12,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sp/sp_{{ version }}.tar.gz
-  sha256: 0d2f84102591ed57d4b5d361a7a42bc72d2a9d49f38c6227e87e8ccb946dde27
-
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
+  sha256: 6d60e03e1abd30a7d4afe547d157ce3dd7a8c166fc5e407fd6d62ae99ff30460
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
-
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -77,9 +71,9 @@ extra:
 # The original CRAN metadata for this package was:
 
 # Package: sp
-# Version: 1.2-5
+# Version: 1.2-7
 # Title: Classes and Methods for Spatial Data
-# Authors@R: c(person("Edzer", "Pebesma", role = c("aut", "cre"), email = "edzer.pebesma@uni-muenster.de"), person("Roger", "Bivand", role = "aut", email = "Roger.Bivand@nhh.no"), person("Barry", "Rowlingson", role = "ctb"), person("Virgilio", "Gomez-Rubio", role = "ctb"), person("Robert", "Hijmans", role = "ctb"), person("Michael", "Sumner", role = "ctb"), person("Don", "MacQueen", role = "ctb"), person("Jim", "Lemon", role = "ctb"), person("Josh", "O'Brien", role = "ctb"))
+# Authors@R: c(person("Edzer", "Pebesma", role = c("aut", "cre"), email = "edzer.pebesma@uni-muenster.de"), person("Roger", "Bivand", role = "aut", email = "Roger.Bivand@nhh.no"), person("Barry", "Rowlingson", role = "ctb"), person("Virgilio", "Gomez-Rubio", role = "ctb"), person("Robert", "Hijmans", role = "ctb"), person("Michael", "Sumner", role = "ctb"), person("Don", "MacQueen", role = "ctb"), person("Jim", "Lemon", role = "ctb"), person("Josh", "O'Brien", role = "ctb"), person("Joseph", "O'Rourke", role = "ctb"))
 # Depends: R (>= 3.0.0), methods
 # Imports: utils, stats, graphics, grDevices, lattice, grid
 # Suggests: RColorBrewer, rgdal (>= 0.8-7), rgeos (>= 0.3-13), gstat, maptools, deldir
@@ -89,11 +83,11 @@ extra:
 # BugReports: https://github.com/edzer/sp/issues
 # Collate: bpy.colors.R AAA.R Class-CRS.R CRS-methods.R Class-Spatial.R Spatial-methods.R projected.R Class-SpatialPoints.R SpatialPoints-methods.R Class-SpatialPointsDataFrame.R SpatialPointsDataFrame-methods.R Class-SpatialMultiPoints.R SpatialMultiPoints-methods.R Class-SpatialMultiPointsDataFrame.R SpatialMultiPointsDataFrame-methods.R Class-GridTopology.R Class-SpatialGrid.R Class-SpatialGridDataFrame.R Class-SpatialLines.R SpatialLines-methods.R Class-SpatialLinesDataFrame.R SpatialLinesDataFrame-methods.R Class-SpatialPolygons.R Class-SpatialPolygonsDataFrame.R SpatialPolygons-methods.R SpatialPolygonsDataFrame-methods.R GridTopology-methods.R SpatialGrid-methods.R SpatialGridDataFrame-methods.R SpatialPolygons-internals.R point.in.polygon.R SpatialPolygons-displayMethods.R zerodist.R image.R stack.R bubble.R mapasp.R select.spatial.R gridded.R asciigrid.R spplot.R over.R spsample.R recenter.R dms.R gridlines.R spdists.R rbind.R flipSGDF.R chfids.R loadmeuse.R compassRose.R surfaceArea.R spOptions.R subset.R disaggregate.R sp_spat1.R merge.R aggregate.R
 # NeedsCompilation: yes
-# Packaged: 2017-06-27 12:59:17 UTC; edzer
-# Author: Edzer Pebesma [aut, cre], Roger Bivand [aut], Barry Rowlingson [ctb], Virgilio Gomez-Rubio [ctb], Robert Hijmans [ctb], Michael Sumner [ctb], Don MacQueen [ctb], Jim Lemon [ctb], Josh O'Brien [ctb]
+# Packaged: 2018-01-18 20:46:27 UTC; edzer
+# Author: Edzer Pebesma [aut, cre], Roger Bivand [aut], Barry Rowlingson [ctb], Virgilio Gomez-Rubio [ctb], Robert Hijmans [ctb], Michael Sumner [ctb], Don MacQueen [ctb], Jim Lemon [ctb], Josh O'Brien [ctb], Joseph O'Rourke [ctb]
 # Maintainer: Edzer Pebesma <edzer.pebesma@uni-muenster.de>
 # Repository: CRAN
-# Date/Publication: 2017-06-29 09:07:36 UTC
+# Date/Publication: 2018-01-19 14:54:40 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
