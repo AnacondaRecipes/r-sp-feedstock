@@ -63,6 +63,7 @@ about:
     plotting data as maps, spatial selection, as well as methods for retrieving coordinates,
     for subsetting, print, summary, etc.
   license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
